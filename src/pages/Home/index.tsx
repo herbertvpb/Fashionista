@@ -5,7 +5,6 @@ import { productAPI } from "../../services/productAPI";
 import { ProductType } from "../../services/types";
 
 import { Card } from "../../components/modules/card";
-import { SearchInput } from "../../components/modules/searchInput";
 import { ModalCard } from "../../components/modules/modalCard";
 
 const Home = () => {
@@ -26,7 +25,6 @@ const Home = () => {
         <meta name="author" content={t("author")} />
         <meta name="keywords" content={t("keywords")} />
       </Helmet>
-      <SearchInput onSearchChange={() => false} />
       {products.length && (
         <ModalCard
           product={products[0]}

@@ -9,15 +9,18 @@ import Header from "./components/modules/header";
 
 import "./styles/main.scss";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <div className="container">
-        <Routes />
-      </div>
-      <Footer />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const App = () => {
+  return (
+    <React.StrictMode>
+      <BrowserRouter>
+        <Header />
+        <div className="container">
+          <Routes />
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
