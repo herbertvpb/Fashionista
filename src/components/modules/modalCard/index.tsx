@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import { ProductType } from "../../../services/types";
+import { Button } from "../../base/buttons"; 
 
 type ModalCardPropsType = {
   product: ProductType;
   onProductClick: () => void;
+  isBag: boolean;
 };
 
 export const ModalCard = (props: ModalCardPropsType) => {
@@ -12,8 +14,18 @@ export const ModalCard = (props: ModalCardPropsType) => {
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="modal__card" onClick={props.onProductClick}>
       <div className="modal__card-product">
-        <img src={props.product.image} alt="" />
-        <span className="modal__product-name">{props.product.name}</span>
+        <div className="modal__product-image">
+          <img src={props.product.image} alt="" />
+          <Button>
+            Remover
+          </Button>
+        </div>
+        <div className="modal__product-info">
+          <span className="modal__product-name">{props.product.name}</span>
+          <span className="modal__product-size">
+            {`Tam.: ${props.product.sizes[0].size}`}
+          </span>
+        </div>
       </div>
       <div className="modal__card-payment">
         <span className="modal__card-price">
