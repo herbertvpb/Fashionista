@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import { ProductType } from "../../../services/types";
-import { Button } from "../../base/buttons"; 
+import { Button } from "../../base/buttons";
 
 type ModalCardPropsType = {
   product: ProductType;
@@ -16,9 +16,7 @@ export const ModalCard = (props: ModalCardPropsType) => {
       <div className="modal__card-product">
         <div className="modal__product-image">
           <img src={props.product.image} alt="" />
-          <Button>
-            Remover
-          </Button>
+          <Button>Remover</Button>
         </div>
         <div className="modal__product-info">
           <span className="modal__product-name">{props.product.name}</span>
